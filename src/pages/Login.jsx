@@ -24,7 +24,7 @@ function Login() {
       )
 
       const token = response.data.access_token
-      localStorage.setItem("token", token)
+      localStorage.setItem(process.env.REACT_APP_JWT_TOKEN_KEY, token);
 
       navigate("/dashboard")
 
